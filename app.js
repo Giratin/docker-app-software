@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/mongo-esp', { useUnifiedTopology : true, useNewUrlParser: true})
+mongoose.connect('mongodb://mongo_db:27017/mongo-esp', { useUnifiedTopology : true, useNewUrlParser: true})
   .then((res)=>{
     console.log("mongoDb connected")
   }).catch((err)=>{

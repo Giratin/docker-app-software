@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+    application:
+        image: server:1.0.0
+        restarts: always
+        ports:
+            - "3002:3000"
+        depends_on: 
+            - mongo_db
+    mongo_db:
+        image: mongo
+        ports:
+            - "27017:27017"
+        restart: always
